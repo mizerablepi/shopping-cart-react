@@ -5,7 +5,7 @@ export default function Navbar({ itemsInCart = 0 }) {
   const { pathname } = useLocation();
   const section = pathname;
   return (
-    <nav className="flex justify-between items-center px-28 py-6 shadow-md sticky top-0 bg-white">
+    <nav className="flex justify-between items-center px-28 py-6 shadow-md sticky top-0 bg-white z-10">
       <div className="font-bold text-yellow-400 text-3xl">sahara</div>
       <div>
         <Link
