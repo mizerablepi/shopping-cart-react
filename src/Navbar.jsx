@@ -25,7 +25,7 @@ export default function Navbar({ itemsInCart = 0 }) {
           Shop
         </Link>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-8">
         <div className="flex items-center relative">
           <ItemCount count={itemsInCart} />{" "}
         </div>
