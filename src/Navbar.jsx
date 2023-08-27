@@ -1,3 +1,40 @@
-export default function Navbar() {
-  return <nav>I am a nav bar</nav>;
+import ItemCount from "./ItemCount";
+import { Link, useLocation } from "react-router-dom";
+
+export default function Navbar({ itemsInCart = 0 }) {
+  const { pathname } = useLocation();
+  console.log({ pathname });
+  const section = pathname;
+  return (
+    <nav className="flex justify-between items-center px-28 py-6 shadow-md sticky top-0 bg-white">
+      <div className="font-bold text-yellow-400 text-3xl">sahara</div>
+      <div>
+        <Link
+          to={""}
+          className={`mr-10 pb-1.5 ${
+            section === "/" ? "border-yellow-400 border-b-4" : ""
+          }`}
+        >
+          Home
+        </Link>{" "}
+        <Link
+          to={"shop"}
+          className={`mr-10 pb-1.5 ${
+            section === "/shop" ? "border-b-4 border-yellow-400 " : ""
+          }`}
+        >
+          Shop
+        </Link>
+      </div>
+      <div className="flex gap-5">
+        <div className="flex items-center">
+          <ItemCount count={itemsInCart} />{" "}
+          <img src="/cart-outline.svg" alt="checkout" className="h-6" />
+        </div>
+        <button className="bg-sky-400 text-white font-bold rounded px-3 py-0.5">
+          Login
+        </button>
+      </div>
+    </nav>
+  );
 }
