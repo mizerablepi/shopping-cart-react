@@ -1,13 +1,21 @@
 export default function ItemCount({ count }) {
   if (count < 10) {
     return (
-      <div className="bg-gray-400 rounded-xl text-white px-2 pt-[2px]">
-        {count}
-      </div>
+      <a
+        href=""
+        className={`after:content-['${count.toString()}'] after:absolute after:top-[-0.8rem] after:left-6`}
+      >
+        <img src="/cart-outline.svg" alt="checkout" className="h-6" />
+      </a>
     );
   } else {
     return (
-      <div className="bg-gray-400 rounded-xl text-white px-1 pt-[2px]">9+</div>
+      <a
+        href=""
+        className={`after:content-['9+'] after:absolute after:top-[-0.8rem] after:left-6`}
+      >
+        <img src="/cart-outline.svg" alt="checkout" className="h-6" />
+      </a>
     );
   }
 }
