@@ -29,7 +29,7 @@ export default function Navbar({ itemsInCart = 0 }) {
         <div className="flex items-center relative">
           <ItemCount count={itemsInCart} />{" "}
         </div>
-        <button className="bg-sky-400 text-white font-bold rounded px-3 py-0.5">
+        <button className="bg-yellow-400 text-white font-bold rounded px-3 py-0.5">
           Login
         </button>
       </div>
