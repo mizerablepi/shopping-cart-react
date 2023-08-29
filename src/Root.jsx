@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 export default function Root() {
-  const dummy = 10;
+  const [itemsInCart, setItemsInCart] = useState([]);
+  const itemsInCartCount = itemsInCart.length.toString();
+  // console.log(itemsInCart);
   return (
     <>
-      <Navbar itemsInCart={dummy} />
-      <Outlet />
+      <Navbar itemsInCart={itemsInCartCount} />
+      <Outlet context={[itemsInCart, setItemsInCart]} />
     </>
   );
 }
