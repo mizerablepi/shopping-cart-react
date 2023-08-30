@@ -19,7 +19,7 @@ export default function Navbar({ itemsInCart = 0 }) {
         <Link
           to={"shop"}
           className={`pb-1.5 ${
-            section === "/shop" ? "border-b-4 border-yellow-400 " : ""
+            section !== "/" ? "border-b-4 border-yellow-400 " : ""
           }`}
         >
           Shop
