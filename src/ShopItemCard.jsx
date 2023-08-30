@@ -7,7 +7,8 @@ export default function ShopItemCard({ item, addItemHandler }) {
     setItemCount(+e.target.value);
   }
   function handleAddToCart() {
-    addItemHandler(item);
+    if (itemCount === 0) return;
+    addItemHandler(item, itemCount);
   }
   return (
     <div className="w-40 flex flex-col items-center">
