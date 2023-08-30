@@ -28,7 +28,9 @@ export default function Navbar({ itemsInCart = 0 }) {
       </div>
       <div className="flex gap-8">
         <div className="flex items-center relative">
-          <ItemCount count={itemsInCart} />{" "}
+          <Link to={"cart"}>
+            <ItemCount count={itemsInCart} />
+          </Link>{" "}
         </div>
         <button className="bg-yellow-400 text-white font-bold rounded px-3 py-0.5">
           Login
