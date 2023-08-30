@@ -17,6 +17,10 @@ export default function Route() {
           path: "/shop",
           element: <Shop />,
         },
+        {
+          path: "/shop/:category",
+          element: <Shop />,
+        },
       ],
     },
   ]);
