@@ -17,9 +17,21 @@ function Home() {
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-4 m-4">
-        <HomeItemCard img={"/electronics.jpg"} title={"Shop electronics"} />
-        <HomeItemCard img={"/women-wear.jpg"} title={"Shop Women's Wear"} />
-        <HomeItemCard img={"/jewelry.jpg"} title={"Shop Jewelry"} />
+        <HomeItemCard
+          img={"/electronics.jpg"}
+          title={"Shop electronics"}
+          link={"/shop/electronics"}
+        />
+        <HomeItemCard
+          img={"/women-wear.jpg"}
+          title={"Shop Women's Wear"}
+          link={"/shop/women"}
+        />
+        <HomeItemCard
+          img={"/jewelry.jpg"}
+          title={"Shop Jewelry"}
+          link={"/shop/jewelery"}
+        />
       </div>
     </div>
   );

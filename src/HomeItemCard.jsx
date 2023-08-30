@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function HomeItemCard({ img, title, link = "shop" }) {
+export default function HomeItemCard({ img, title, link }) {
   return (
     <div className="relative">
       <img src={img} className="" />
