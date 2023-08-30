@@ -12,7 +12,7 @@ function Home() {
             <br /> 2023
           </span>
           <Link
-            to={"shop"}
+            to={"/shop"}
             className="bg-blue-500 font-bold text-white py-4 px-10 mb-12 self-start"
           >
             Shop Now
