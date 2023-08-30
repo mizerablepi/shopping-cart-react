@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export default function Root() {
   const [itemsInCart, setItemsInCart] = useState([]);
-  console.log(itemsInCart);
   const itemsInCartCount = itemsInCart.length.toString();
   return (
     <>
