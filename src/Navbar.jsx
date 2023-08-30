@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Navbar({ itemsInCart = 0 }) {
   const { pathname } = useLocation();
   const section = pathname;
+  const regex = new RegExp("/shop*");
   return (
     <nav className="flex justify-between items-center px-28 py-6 shadow-md sticky top-0 bg-white z-10">
       <div className="font-bold text-yellow-400 text-3xl">sahara</div>
@@ -19,7 +20,7 @@ export default function Navbar({ itemsInCart = 0 }) {
         <Link
           to={"shop"}
           className={`pb-1.5 ${
-            section !== "/" ? "border-b-4 border-yellow-400 " : ""
+            regex.test(section) ? "border-b-4 border-yellow-400 " : ""
           }`}
         >
           Shop
