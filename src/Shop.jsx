@@ -7,16 +7,22 @@ export default function Shop() {
   const [itemsInCart, setItemsInCart] = useOutletContext();
   const { category } = useParams();
   let currentItems;
+  let title = "";
   if (category === "men") {
     currentItems = items.filter((item) => item.category === "men's clothing");
+    title = "Men's Clothing";
   } else if (category === "women") {
     currentItems = items.filter((item) => item.category === "women's clothing");
+    title = "Women's Clothing";
   } else if (category === "electronics") {
     currentItems = items.filter((item) => item.category === "electronics");
+    title = "Electronics";
   } else if (category === "jewelery") {
     currentItems = items.filter((item) => item.category === "jewelery");
+    title = "Jewelery";
   } else {
     currentItems = items;
+    title = "All";
   }
 
   useEffect(() => {
@@ -54,20 +60,21 @@ export default function Shop() {
             </div>
           </div>
           <div className="mb-6 shadow">
-            <div className="bg-amber-100 px-6 py-4">BROWSE CATEGORIES</div>
+            <div className="bg-amber-100 px-6 py-4">BROWSE BRANDS</div>
             <div className="mx-6 py-6 flex flex-col gap-2">
-              <Link to="">Men&apos;s Wear</Link>
-              <Link to="">Women&apos;s Wear</Link>
-              <Link to="">Electronics</Link>
-              <Link to="">Jewelery</Link>
+              <Link to="">Adidas</Link>
+              <Link to="">Reebok</Link>
+              <Link to="">Calvin & Klein</Link>
+              <Link to="">Nike</Link>
+              <Link to="">LTT</Link>
+              <Link to="">D-Brand</Link>
             </div>
           </div>
         </aside>
         <main className="p-4">
           <div>
             <h1 className="font-bold text-3xl">
-              {currentItems.length > 0 && currentItems[0].category} (
-              {currentItems.length})
+              {title} ({currentItems.length})
             </h1>
           </div>
           <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap justify-items-center gap-8">
