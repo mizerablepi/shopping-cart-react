@@ -1,4 +1,5 @@
 import HomeItemCard from "./HomeItemCard";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -10,9 +11,12 @@ function Home() {
             Fashion Collection
             <br /> 2023
           </span>
-          <button className="bg-blue-500 font-bold text-white py-4 px-10 mb-12 self-start">
+          <Link
+            to={"shop"}
+            className="bg-blue-500 font-bold text-white py-4 px-10 mb-12 self-start"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
       </div>
 
