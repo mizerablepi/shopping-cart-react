@@ -47,19 +47,19 @@ export default function Shop() {
           <div className="mb-6 shadow">
             <div className="bg-amber-100 px-6 py-4">BROWSE CATEGORIES</div>
             <div className="mx-6 py-6 flex flex-col gap-2">
-              <Link to="">Men&apos;s Wear</Link>
-              <Link to="">Women&apos;s Wear</Link>
-              <Link to="">Electronics</Link>
-              <Link to="">Jewelery</Link>
+              <Link to="/shop/men">Men&apos;s Wear</Link>
+              <Link to="/shop/women">Women&apos;s Wear</Link>
+              <Link to="/shop/electronics">Electronics</Link>
+              <Link to="/shop/jewelery">Jewelery</Link>
             </div>
           </div>
           <div className="mb-6 shadow">
             <div className="bg-amber-100 px-6 py-4">BROWSE CATEGORIES</div>
             <div className="mx-6 py-6 flex flex-col gap-2">
-              <Link to="/shop/men">Men&apos;s Wear</Link>
-              <Link to="/shop/women">Women&apos;s Wear</Link>
-              <Link to="/shop/electronics">Electronics</Link>
-              <Link to="/shop/jewelery">Jewelery</Link>
+              <Link to="">Men&apos;s Wear</Link>
+              <Link to="">Women&apos;s Wear</Link>
+              <Link to="">Electronics</Link>
+              <Link to="">Jewelery</Link>
             </div>
           </div>
         </aside>
